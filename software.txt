@@ -1,0 +1,3 @@
+my-sql-connector-python
+matplotlib.pyplot
+seaborn
