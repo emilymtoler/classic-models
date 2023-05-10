@@ -182,7 +182,7 @@ plot1 = st.columns(1)
 with plot1[0]:
 # Display numerical plot
     st.write('How are different product lines performing?')
-    dropbox1 = st.selectbox('Select what you would like to compare', ['quantityOrdered', 'priceDifference', 'expectedProfit', 'profit', 'percentProfit'], key="products")
+    dropbox1 = st.selectbox('Select what you would like to compare', ['quantityOrdered', 'priceDifference', 'expectedProfit', 'profit', 'percentProfit'], key="classic")
     dropbox1_names = ['Quantity Ordered', 'Price Difference', 'Expected Profit', 'Profit', 'Percent Profit']
     fig = sns.catplot(data=cm_df, x="productLine", y=dropbox1, kind="box")
     plt.xlabel("Product Line")
@@ -194,7 +194,7 @@ with plot1[0]:
 #NEW
 plot11 = st.columns(1)
 with plot11[0]:
-    dropbox11 = st.selectbox('Select what you would like to compare', ['quantityOrdered', 'priceDifference', 'expectedProfit', 'profit', 'percentProfit'])
+    dropbox11 = st.selectbox('Select what you would like to compare', ['quantityOrdered', 'priceDifference', 'expectedProfit', 'profit', 'percentProfit'], key = 'models')
     dropbox11_names = ["Quantity Ordered", "Price Difference", "Expected Profit", "Profit", "Percent Profit"]
     fig, axes = plt.subplots(2,4, sharey=True)
     sns.histplot(ax=axes[0,0], data=PLvc, x=dropbox11)
@@ -209,7 +209,7 @@ with plot11[0]:
     st.pyplot(fig)
 plot12 = st.columns(1)
 with plot12[0]:
-    dropbox12 = st.selectbox('Select what you would like to compare', ['quantityOrdered', 'priceDifference', 'expectedProfit', 'profit', 'percentProfit'])
+    dropbox12 = st.selectbox('Select what you would like to compare', ['quantityOrdered', 'priceDifference', 'expectedProfit', 'profit', 'percentProfit'], key = 'corvette')
     dropbox12_names = ["Quantity Ordered", "Price Difference", "Expected Profit", "Profit", "Percent Profit"]
     dropbox22 = st.selectbox('Select what you would like to compare', ['orderDate', 'shippedDate', 'paymentDate'], key='products')
     dropbox22_names = ['Order Date', 'Shipped Date', 'Payment Date']
@@ -226,9 +226,9 @@ with plot12[0]:
     
 with plot13[0]:
     
-    dropbox13 = st.selectbox('Select what you would like to compare', ['quantityOrdered', 'priceDifference', 'expectedProfit', 'profit', 'percentProfit'])
+    dropbox13 = st.selectbox('Select what you would like to compare', ['quantityOrdered', 'priceDifference', 'expectedProfit', 'profit', 'percentProfit'], key = 'camaro')
     dropbox13_names = ["Quantity Ordered", "Price Difference", "Expected Profit", "Profit", "Percent Profit"]
-    dropbox23 = st.selectbox('Select what you would like to compare', ['orderDate', 'shippedDate', 'paymentDate'], key='products')
+    dropbox23 = st.selectbox('Select what you would like to compare', ['orderDate', 'shippedDate', 'paymentDate'], key='accent')
     dropbox23_names = ['Order Date', 'Shipped Date', 'Payment Date']
     fig, axes = plt.subplots(2,4, sharey=True)
     sns.histplot(ax=axes[0,0], data=PLvc, x=dropbox23, y=dropbox13)
