@@ -223,7 +223,8 @@ with plot12[0]:
     sns.histplot(ax=axes[1,0], data=PLs, x=dropbox22, y=dropbox12)
     sns.histplot(ax=axes[1,1], data=PLp, x=dropbox22, y=dropbox12)
     sns.histplot(ax=axes[1,2], data=PLm, x=dropbox22, y=dropbox12)
-    
+
+plot13=st.columns(1)
 with plot13[0]:
     dropbox13 = st.selectbox('Select what you would like to compare', ['quantityOrdered', 'priceDifference', 'expectedProfit', 'profit', 'percentProfit'], key = 'camaro')
     dropbox13_names = ["Quantity Ordered", "Price Difference", "Expected Profit", "Profit", "Percent Profit"]
@@ -242,7 +243,7 @@ with plot13[0]:
     
     st.pyplot(fig)
 
-plot13=st.columns(1)
+plot14 = st.columns(1)
 with plot14[0]:
     dropbox14 = st.selectbox('Select what you would like to compare', ['quantityInStock', 'buyPrice', 'quantityOrdered', 'profit', 'expectedProfit', 'priceDifference'], key='products3')
     fig = plt.pie(data=cm_df_PL, x=cm_df_PL[dropbox14], labels = dropbox14)
