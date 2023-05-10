@@ -165,7 +165,7 @@ PLt = cm_df.loc[lambda df: df["productLine"]=="Trains"]
 PLs = cm_df.loc[lambda df: df["productLine"]=="Ships"]
 PLp = cm_df.loc[lambda df: df["productLine"]=="Planes"]
 PLm = cm_df.loc[lambda df: df["productLine"]=="Motorcycles"]
-cm_df_PL = cm_df[["productLine",'quantityInStock', 'buyPrice', 'quantityOrdered', 'profit', 'expectedProfit', 'priceDifference']].groupby(by=cm_df["productLine"]).sum()
+cm_df_PL = cm_df[['quantityInStock', 'buyPrice', 'quantityOrdered', 'profit', 'expectedProfit', 'priceDifference']].groupby(by=cm_df["productLine"]).sum()
 #NEW END
 cm_df_PL
 
