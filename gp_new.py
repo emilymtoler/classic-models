@@ -200,6 +200,7 @@ with plot11[0]:
     sns.histplot(ax=axes[0,0], data=PLvc, x=dropbox11)
     plt.xlabel(dropbox11)
     plt.ylabel("Count")
+    axes[1, 3].axis('off')
     sns.histplot(ax=axes[0,1], data=PLcc, x=dropbox11)
     sns.histplot(ax=axes[0,2], data=PLtb, x=dropbox11)
     sns.histplot(ax=axes[0,3], data=PLt, x=dropbox11)
