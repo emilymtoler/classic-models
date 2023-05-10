@@ -203,6 +203,7 @@ with plot11[0]:
     sns.histplot(ax=axes[1,0], data=PLs, x=dropbox1)
     sns.histplot(ax=axes[1,1], data=PLp, x=dropbox1)
     sns.histplot(ax=axes[1,2], data=PLm, x=dropbox1)
+    st.pyplot(fig)
     
 plot12 = st.columns(1)
 with plot12[0]:
@@ -220,6 +221,8 @@ with plot12[0]:
     sns.histplot(ax=axes[1,0], data=PLs, x=dropbox2, y=dropbox1)
     sns.histplot(ax=axes[1,1], data=PLp, x=dropbox2, y=dropbox1)
     sns.histplot(ax=axes[1,2], data=PLm, x=dropbox2, y=dropbox1)
+    st.pyplot(fig)
+    
     dropbox1 = st.selectbox('Select what you would like to compare', ['quantityOrdered', 'priceDifference', 'expectedProfit', 'profit', 'percentProfit'], key = 'kyle')
     dropbox1_names = ["Quantity Ordered", "Price Difference", "Expected Profit", "Profit", "Percent Profit"]
     dropbox2 = st.selectbox('Select what you would like to compare', ['orderDate', 'shippedDate', 'paymentDate'], key = 'sami')
@@ -234,10 +237,14 @@ with plot12[0]:
     sns.histplot(ax=axes[1,0], data=PLs, x=dropbox2, y=dropbox1)
     sns.histplot(ax=axes[1,1], data=PLp, x=dropbox2, y=dropbox1)
     sns.histplot(ax=axes[1,2], data=PLm, x=dropbox2, y=dropbox1)    
+    st.pyplot(fig)
+    
 plot13=st.columns(1)
 with plot13[0]:
     dropbox1 = st.selectbox('Select what you would like to compare', ['quantityInStock', 'buyPrice', 'quantityOrdered', 'profit', 'expectedProfit', 'priceDifference'], key = 'corvette')
     fig = plt.pie(data=cm_df_PL, x=cm_df_PL[dropbox1], labels = dropbox1)
+    st.pyplot(fig)
+    
 #NEW END
 #Emily did this code
 st.subheader('Vendor Performance')
