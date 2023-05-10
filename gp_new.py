@@ -207,6 +207,7 @@ with plot11[0]:
     sns.histplot(ax=axes[1,1], data=PLp, x=dropbox11)
     sns.histplot(ax=axes[1,2], data=PLm, x=dropbox11)
     st.pyplot(fig)
+    
 plot12 = st.columns(1)
 with plot12[0]:
     dropbox12 = st.selectbox('Select what you would like to compare', ['quantityOrdered', 'priceDifference', 'expectedProfit', 'profit', 'percentProfit'], key = 'corvette')
@@ -217,7 +218,7 @@ with plot12[0]:
     sns.histplot(ax=axes[0,0], data=PLvc, x=dropbox22, y=dropbox12)
     plt.xlabel(dropbox22)
     plt.ylabel(dropbox12)
-    plt.xticks(rotation=45,fontsize=2)
+    fig[-1, -1].axis('off')
     sns.histplot(ax=axes[0,1], data=PLcc, x=dropbox22, y=dropbox12)
     sns.histplot(ax=axes[0,2], data=PLtb, x=dropbox22, y=dropbox12)
     sns.histplot(ax=axes[0,3], data=PLt, x=dropbox22, y=dropbox12)
@@ -236,7 +237,7 @@ with plot13[0]:
     sns.histplot(ax=axes[0,0], data=PLvc, x=dropbox23, y=dropbox13)
     plt.xlabel(dropbox23)
     plt.ylabel(dropbox13)
-    plt.xticks(rotation=45,fontsize=2)
+    fig[-1, -1].axis('off')
     sns.histplot(ax=axes[0,1], data=PLcc, x=dropbox23, y=dropbox13)
     sns.histplot(ax=axes[0,2], data=PLtb, x=dropbox23, y=dropbox13)
     sns.histplot(ax=axes[0,3], data=PLt, x=dropbox23, y=dropbox13)
