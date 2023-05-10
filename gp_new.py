@@ -225,7 +225,6 @@ with plot12[0]:
     sns.histplot(ax=axes[1,2], data=PLm, x=dropbox22, y=dropbox12)
     
 with plot13[0]:
-    
     dropbox13 = st.selectbox('Select what you would like to compare', ['quantityOrdered', 'priceDifference', 'expectedProfit', 'profit', 'percentProfit'], key = 'camaro')
     dropbox13_names = ["Quantity Ordered", "Price Difference", "Expected Profit", "Profit", "Percent Profit"]
     dropbox23 = st.selectbox('Select what you would like to compare', ['orderDate', 'shippedDate', 'paymentDate'], key='accent')
