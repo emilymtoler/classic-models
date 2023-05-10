@@ -248,11 +248,11 @@ with plot13[0]:
     
     st.pyplot(fig)
 
-plot14 = st.columns(1)
-with plot14[0]:
-    dropbox14 = st.selectbox('Select what you would like to compare', ['quantityInStock', 'buyPrice', 'quantityOrdered', 'profit', 'expectedProfit', 'priceDifference'], key='products3')
-    fig2 = sns.barplot(data=cm_df_PL, x=cm_df_PL[dropbox14])
-    st.pyplot(fig2)
+# plot14 = st.columns(1)
+# with plot14[0]:
+#     dropbox14 = st.selectbox('Select what you would like to compare', ['quantityInStock', 'buyPrice', 'quantityOrdered', 'profit', 'expectedProfit', 'priceDifference'], key='products3')
+#     fig2 = sns.barplot(data=cm_df_PL, x=cm_df_PL[dropbox14])
+#     st.pyplot(fig2)
 
     #NEW END
 #Emily did this code
