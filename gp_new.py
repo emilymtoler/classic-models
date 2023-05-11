@@ -219,6 +219,7 @@ with plot12[0]:
     sns.histplot(ax=axes[0,0], data=PLvc, x=dropbox22, y=dropbox12)
     plt.xlabel(dropbox22)
     plt.ylabel(dropbox12)
+    plt.xticks(rotation=45,fontsize=3)
     axes[1, 3].axis('off')
     sns.histplot(ax=axes[0,1], data=PLcc, x=dropbox22, y=dropbox12)
     sns.histplot(ax=axes[0,2], data=PLtb, x=dropbox22, y=dropbox12)
@@ -237,6 +238,7 @@ with plot13[0]:
     fig, axes = plt.subplots(2,4, sharey=True)
     sns.histplot(ax=axes[0,0], data=PLvc, x=dropbox23, y=dropbox13)
     plt.xlabel(dropbox23)
+    plt.xticks(rotation=45,fontsize=3)
     plt.ylabel(dropbox13)
     axes[1, 3].axis('off')
     sns.histplot(ax=axes[0,1], data=PLcc, x=dropbox23, y=dropbox13)
@@ -248,11 +250,6 @@ with plot13[0]:
     
     st.pyplot(fig)
 
-# plot14 = st.columns(1)
-# with plot14[0]:
-#     dropbox14 = st.selectbox('Select what you would like to compare', ['quantityInStock', 'buyPrice', 'quantityOrdered', 'profit', 'expectedProfit', 'priceDifference'], key='products3')
-#     fig2 = sns.barplot(data=cm_df_PL, x=cm_df_PL[dropbox14])
-#     st.pyplot(fig2)
 
     #NEW END
 #Emily did this code
